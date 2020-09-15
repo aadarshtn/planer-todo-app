@@ -1,0 +1,11 @@
+{
+  "name": "planer",
+  "version": "1.0.0",
+  "description": "A versatile daily planer cum ToDo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ADARSH T N",
+  "license": "ISC"
+}
