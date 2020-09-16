@@ -1,0 +1,145 @@
+body{
+    background-color: cadetblue;
+    margin: 0;
+    padding: 0;
+}
+
+#todo-app-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 30%;
+    background-color:rgb(116, 155, 156);
+    width: 40%;
+    height: 70%;
+    margin-top: 2%;
+    border: 5px solid white;
+}
+
+#todo-app-body:hover{
+    box-shadow: 0px 0px 10px black;
+}
+
+#app-title{
+    position: relative;
+    margin: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    border: 1px solid white;
+    padding-bottom: 8px;
+}
+
+#app-title h1{
+    margin: 1%;
+    font-family: monospace;
+    font-size: 3rem;
+}
+
+#input-form{
+
+}
+
+/* Customising The Description p tag */
+#input-form p{
+    margin: 0;
+    padding-left: 2%;
+    padding-top: 1%;
+    color: white;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+/* Adding Custom Border To Description Section To Make It Stand Out From The Rest Form Elements */
+#input-description-div{
+    border: 1px solid white;
+    border-top: 0px;
+}
+
+/* Customising the description input text area */
+#input-description{
+    margin-left: 2%;
+    margin-top: 0.5%;
+    height: 33%;
+    width: 93%;
+    border: none;
+    color: white;
+    background-color: rgb(116, 155, 156);
+    font-size: 1rem;
+}
+
+/* Removing the textbox highlighting upon focus */
+#input-description:focus{
+    outline: none;
+}
+
+/* Customising description place holder */
+#input-description::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+
+/* Row-type flex for viewing category and date sidewise */
+#input-category-date-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+#input-category-div{
+    border: 1px solid white;
+    border-top: 0px;
+    width: 50%;
+    height: 33%;
+    padding: 1%;
+}
+
+#input-category-div p{
+    margin: 0;
+    margin-bottom: 1%;
+    color: white;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+#input-category-div select{
+    width: 98%;
+    height: 20px;
+    border: none;
+    background-color: rgb(116, 155, 156);
+    color: white;
+    font-size: 0.9rem;
+}
+
+#input-category-div select:focus{
+    outline: none;
+}
+
+#input-date-div{
+    border: 1px solid white;
+    border-top: 0px;
+    width: 50%;
+    height: 33%;
+    padding: 1%;
+}
+
+#input-date-div p{
+    margin: 0;
+    margin-bottom: 1%;
+    color: white;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+#input-date-div input{
+    width: 98%;
+    border: none;
+    background-color: rgb(116, 155, 156);
+}
+
+#input-date-div input::placeholder{
+    color: white;
+}
+
+#input-date-div input:focus{
+    outline: none;
+}
