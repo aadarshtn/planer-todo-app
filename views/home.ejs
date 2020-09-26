@@ -5,6 +5,7 @@
             <%= title %>
         </title>
         <link rel="stylesheet" href="/css/home.css">
+        <script src="https://kit.fontawesome.com/04b5152fc0.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -12,16 +13,15 @@
             <div id = "app-title">
                 <h1>pLANER : TODO APP</h1>
             </div>
-            <div id = "input-form">
-                <form action="/create-task" method = "POST">
+                <form action="/form-submit" method = "POST" id = "input-form">
                     <div id = "input-description-div">
                         <p>Description</p>
-                        <input type="text" id = "input-description" placeholder="What do you need to do?">
+                        <input type="text" id = "input-description" name="description" placeholder="What do you need to do?">
                     </div>
                     <div id = "input-category-date-flex">
                         <div id = "input-category-div">
                             <p>Category</p>
-                            <select name="category" id="category">
+                            <select name="category" id="category" name="category">
                                 <option value="pesonal">Personal</option>
                                 <option value="work">Work</option>
                                 <option value="other">Other</option>
@@ -30,10 +30,29 @@
                         </div>
                         <div id = "input-date-div">
                             <p>Date</p>
-                            <input type="date" id = "input-date">
+                            <input type="date" id = "input-date" name = "date">
                         </div>
                     </div>
+                    <div id = "buttons">
+                        <button id = "add-task" name = "add"><i class="fas fa-plus-square"></i> ADD TASK</button>
+                        <button id = "delete-task" name = "delete"><i class="fas fa-trash-alt"></i> DELETE TASKS</button>
+                    </div>
                 </form>
+            <div id = "task-list-section">
+                <ul id = "task-list">
+                    <% for (let i of tasks) { %>
+                        <li>
+                            <div id = "idividual-task-entry-total">
+                                <div class = "individual-task-entry">
+                                    <input type="checkbox"> 
+                                    <%= i.description %>
+                                    <%= i.category %>
+                                    <%= i.date %>
+                                </div>
+                            </div>
+                        </li>
+                    <% } %>
+                </ul>
             </div>
         </div>
     </body>

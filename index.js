@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
+const db = require('./config/mongoose');
+const Tasks = require('./models/tasks.js');
+
 // MiddleWares
+app.use(express.urlencoded());
 app.use('/', require('./routes'));     //Setting Up Initial Routes
 app.use(express.static('assets'));     //Setting Up Static Directories
 
